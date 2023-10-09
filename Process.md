@@ -20,3 +20,26 @@ license: (ISC)
 
 Is this OK? (yes) yes
 ```
+
+
+##  Install:
+###  Express
+```sh
+npm install express
+```
+###  Cors
+```sh
+npm install cors
+```
+###  MySQL
+```sh
+npm install mysql
+```
+###  DotEnv
+```sh
+npm install dotenv
+```
+###  Nodemon
+```sh
+npm install nodemon
+```

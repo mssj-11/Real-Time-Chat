@@ -2,7 +2,7 @@
 
 
 
-#   Requeriments
+#   Requeriments:
 *   #####   PHP
 *   #####   MySQL
 *   #####   Node Js
