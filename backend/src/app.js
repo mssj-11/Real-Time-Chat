@@ -5,10 +5,8 @@ const dbConnection = require('./config/db');
 const { API_VERSION, API_NAME } = process.env;
 
 const app = express();
-
 const http = require('http');
 const httpServer = http.createServer(app);
-
 
 const io = require('socket.io')(httpServer, {
     cors: {
@@ -16,10 +14,11 @@ const io = require('socket.io')(httpServer, {
     }
 });
 
-//Middleware
-
 
 /*   Import ROUTES   */
+const userRoutes = require('./router/user');
+
+
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.static('src/uploads'));
@@ -30,7 +29,13 @@ app.use((req, res, next) => {
     req.con = dbConnection;
     next();
 });
-//MS Routes
+
+
+
+//Exp. Routes
+app.use('/', userRoutes);
+
+
 io.on('connect', (socket) => {
     socket.on('diconnect', () => {
         console.log('Disconnected');
