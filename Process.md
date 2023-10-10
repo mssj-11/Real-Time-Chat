@@ -27,6 +27,10 @@ Is this OK? (yes) yes
 ```sh
 npm install express
 ```
+###  Socket IO
+```sh
+npm install socket.io
+```
 ###  Cors
 ```sh
 npm install cors
