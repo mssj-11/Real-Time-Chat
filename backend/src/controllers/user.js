@@ -8,7 +8,7 @@ module.exports = {
             if(error){
                 res.status(500).send({response:'Ha ocurrido un error en el listado de usuarios'});
             }else{
-                res.status(500).send({response: rows});
+                res.status(200).send({response:rows});
             }
         });
     }

@@ -5,3 +5,6 @@ const app = express.Router();
 
 
 app.get('/users', userController.index);
+
+
+module.exports = app;

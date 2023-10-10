@@ -33,7 +33,8 @@ app.use((req, res, next) => {
 
 
 //Exp. Routes
-app.use('/', userRoutes);
+const basePath = `/${API_NAME}/${API_VERSION}`;
+app.use(basePath, userRoutes);
 
 
 io.on('connect', (socket) => {
