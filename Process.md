@@ -43,6 +43,10 @@ npm install mysql
 ```sh
 npm install dotenv
 ```
+###  Bcryptjs
+```sh
+npm install bcryptjs
+```
 ###  Nodemon
 ```sh
 npm install nodemon
