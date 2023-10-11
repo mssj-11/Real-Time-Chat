@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs');
+const fs = require('fs');
+
 
 function hashPassword(password){
     const salt = bcrypt.genSaltSync(10);
@@ -13,8 +15,17 @@ function getFilePath(file){
     return `${folderName}/${fileName}`;
 }
 
+function unlinkFile(path){
+    try {
+        if (!path) throw new Error('No hay imagen para eliminar');
+        fs.unlinkSync(`src/uploads/${path}`);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 module.exports = {
     hashPassword,
-    getFilePath
+    getFilePath,
+    unlinkFile
 }
