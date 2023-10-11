@@ -51,3 +51,7 @@ npm install bcryptjs
 ```sh
 npm install nodemon
 ```
+###  Connect-Multiparty
+```sh
+npm i connect-multiparty
+```
